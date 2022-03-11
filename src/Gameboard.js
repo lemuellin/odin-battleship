@@ -1,12 +1,55 @@
-import Ship from "./Ship.js";
+const Ship = require('./Ship');
 
-const Gameboard = (loc) => {
-    placeShip
+const Gameboard = () => {
+    let board = new Array(10).fill().map(() => Array(10).fill(null));
+    let shipArr = [];
+
+    const placeShip = (shipName, x, y, shipLength, orientation) => {
+        shipName = Ship(shipLength, shipName);
+        shipArr.push(shipName);
+
+        switch(orientation){
+            case 'horizontal':
+                for (let i = 0; i < shipLength; i++){
+                    board[x][y + i] = [shipName, i];
+                }
+            break;
+
+            case 'vertical':
+                for (let i = 0; i < shipLength; i++){
+                    board[x + i][y] = [shipName, i];
+                }
+            break;
+        }
+    }
+
+    const receiveAttack = (x, y) => {
+        if (board[x][y] == null){
+            board[x][y] = 'miss';
+        }else if (board[x][y] == 'miss' || board[x][y] == 'hit'){
+            console.log('invalid attack');
+        }else{
+            board[x][y][0].hit(board[x][y][1]);
+            board[x][y][2] = 'hit';
+        }
+    }
+    // null -> miss
+    // ship -> hit
+    // hit -> again
+    // miss -> again
+
+
+    const allSunk = () => {
+        for(let i = 0; i < shipArr.length; i++){
+            if (shipArr[i].isSunk() == false){
+                return false;
+            }
+        }
+        return true;
+    }
+
+
+    return{board, placeShip, receiveAttack, allSunk};
 };
 
-module.exports = Gameboard ;
-
-// place ships at specific coordinates by calling ```Ship```
-// have a ```receiveAttack function``` that takes a pair of coordinates, determines whether or not the attack hit a ship and then sends the ‘hit’ function to the correct ship, or records the coordinates of the missed shot.
-// Gameboards should keep track of missed attacks so they can display them properly.
-// Gameboards should be able to report whether or not all of their ships have been sunk.
+module.exports = Gameboard;
