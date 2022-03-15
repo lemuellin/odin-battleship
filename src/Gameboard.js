@@ -4,7 +4,27 @@ const Gameboard = () => {
     let board = new Array(10).fill().map(() => Array(10).fill(null));
     let shipArr = [];
 
-    const placeShip = (shipName, x, y, shipLength, orientation) => {
+    const placeShip = (shipName, x, y, orientation) => {
+        let shipLength;
+
+        switch(shipName){
+            case 'Carrier':
+                shipLength = 5;
+                break;
+            case 'Battleship':
+                shipLength = 4;
+                break;
+            case 'Destroyer':
+                shipLength = 3;
+                break;
+            case 'Submarine':
+                shipLength = 3;
+                break;
+            case 'PatrolBoat':
+                shipLength = 2;
+                break;
+        }
+
         shipName = Ship(shipLength, shipName);
         shipArr.push(shipName);
 
