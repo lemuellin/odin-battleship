@@ -15,8 +15,7 @@ No.	Class of ship	Size
 
 TODO:
 
-1. User Interface
-2. After Win: popup = restart button / announce winner
-    another page (opacity 0.5)
+1. Drag and Drop: API
+    drop zone: make ship images
 
-3. refer to Odin
+2. Randomize computer ship placements

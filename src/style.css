@@ -16,7 +16,7 @@
     height: 15vh;
 }
 
-#container{
+#mainPage{
     background-color: #0b2545;
     height: 85vh;
     display: flex;
@@ -24,7 +24,7 @@
     align-items: center;
 }
 
-.container{
+.container2{
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -34,7 +34,7 @@ h2{
     color: white;
 }
 
-#gbPlayer, #gbComputer{
+.gbPlayer, .gbComputer, .gbInit{
     width: 400px;
     height: 400px;
     display: flex;
@@ -57,7 +57,7 @@ h2{
     opacity: 0.5;
 }
 
-#popup{
+#resultPage, #placeShipPage{
     position: absolute;
     top: 0;
     z-index: 0;
@@ -99,3 +99,67 @@ h2{
 .restart:hover{
     opacity: 0.5;
 }
+
+/* ---------- */
+#placeShipPage{
+    display: flex;
+    opacity: 1;
+}
+
+.container1{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container11 > h2{
+    display: flex;
+    align-items: center;
+}
+
+.container11{
+    /* background-color: gray; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.rotate{
+    width: 35px;
+    height: 35px;
+    background-color: red;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer; /* Mouse pointer on hover */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rotate:hover{
+    opacity: 0.9;
+    transition: transform .15s; /* animation*/
+    transform: scale(1.2);
+}
+
+.rotate:active{
+    background-color: white;
+    transform: translateY(2px);
+}
+
+svg{
+    width: 20px;
+    height: 20px;
+}
+
+.gridInit{
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    box-sizing: border-box;
+    border: .1px solid gray;
+}
+
+/* .gridInit:hover{
+    opacity: 0.5;
+} */

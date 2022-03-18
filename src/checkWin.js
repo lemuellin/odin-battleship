@@ -1,5 +1,3 @@
-import {displayResult} from './displayResult';
-
 function checkWin (game){
     if (game.gbComputer.allSunk()){
         let winner = 'YOU';
@@ -9,5 +7,23 @@ function checkWin (game){
         displayResult(winner);
     }
 }
+
+// Display Result on Result Page
+const resultPage = document.getElementById('resultPage');   
+
+function displayResult (winner){
+    resultPage.style.display = 'flex';
+    const win = document.querySelector('.winner');
+    win.textContent = winner;
+}
+
+// restart button
+const restart = document.querySelector('.restart');
+restart.addEventListener('click', () => {
+    resultPage.style.display = 'none';
+    // clear board
+    // reset gameboard, player... data
+    window.location.reload();
+});
 
 export {checkWin};

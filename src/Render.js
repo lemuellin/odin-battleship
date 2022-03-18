@@ -1,7 +1,7 @@
 import {checkWin} from './checkWin.js';
 
-const gbPlayer = document.getElementById('gbPlayer');
-const gbComputer = document.getElementById('gbComputer');
+const gbPlayer = document.querySelector('.gbPlayer');
+const gbComputer = document.querySelector('.gbComputer');
 
 function renderPlayerBoard(totalLength, game){
     const singleGrid = new Array(10).fill().map(() => Array(10).fill(null));
@@ -17,7 +17,7 @@ function renderPlayerBoard(totalLength, game){
             } else if (game.gbPlayer.board[i][j][2] == 'hit'){
                 singleGrid[i][j].style.backgroundColor = "rgb(255,0,0)";
             } else {
-                singleGrid[i][j].style.backgroundColor = "rgb(0,255,0)";
+                singleGrid[i][j].style.backgroundColor = "rgb(0,128,0)";
             }
     
             gbPlayer.appendChild(singleGrid[i][j]);
@@ -62,6 +62,4 @@ function removeAllChild (parent){
     }
 }
 
-
-
-export{renderPlayerBoard, renderComputerBoard};
+export{renderPlayerBoard, renderComputerBoard, removeAllChild};
