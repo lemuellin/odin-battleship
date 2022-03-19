@@ -1,21 +1,22 @@
-# odin-battleship
+# Battleship
+A single player battleship game where the player tries to sink all of the oponent's ships
+[Live Demo](https://lemuellin.github.io/odin-battleship/)
 
-10 x 10 gameboard
-A-J: column
-1-10: row
+# Summary
+1. Test Driven Development
+    I got to practice implementing the logic of the game using Jest and did not have to rely on creating a UI or making many console.log statements.
+2. Factories and Modules
+    By separating functions to different factories and module patterns helps cleaning up the code.
 
+# Future Development:
+1. Implement Drag and Drop API.
+2. Polish the AI by having it try adjacent slots after getting a ‘hit’.
+3. Mobile Friendly
 
-No.	Class of ship	Size
-1	Carrier	         5
-2	Battleship	     4
-3	Destroyer	     3
-4	Submarine	     3
-5	Patrol Boat	     2
-
-
-TODO:
-
-1. Drag and Drop: API
-    drop zone: make ship images
-
-2. Randomize computer ship placements
+# Technologies:
+-   TDD: Test-Driven Development
+-   Jest
+-   Webpack
+-   HTML
+-   CSS
+-   Vanilla Javascript
