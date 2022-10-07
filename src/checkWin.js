@@ -9,10 +9,12 @@ function checkWin (game){
 }
 
 // Display Result on Result Page
-const resultPage = document.getElementById('resultPage');   
+const resultPage = document.getElementById('resultPage');
+const mainPage = document.getElementById('mainPage');   
 
 function displayResult (winner){
     resultPage.style.display = 'flex';
+    mainPage.style.display = 'none';
     const win = document.querySelector('.winner');
     win.textContent = winner;
 }

@@ -11,7 +11,6 @@ A single player battleship game where the player tries to sink all of the oponen
 # Future Development:
 1. Implement Drag and Drop API.
 2. Polish the AI by having it try adjacent slots after getting a ‘hit’.
-3. Mobile Friendly
 
 # Technologies:
 -   TDD: Test-Driven Development

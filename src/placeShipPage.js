@@ -3,6 +3,7 @@ import {renderPlayerBoard, renderComputerBoard} from './Render.js';
 
 const gbInit = document.querySelector('.gbInit');
 const placeShipPageE = document.getElementById('placeShipPage');
+const mainPageE = document.getElementById('mainPage');
 const gbPlayer = document.querySelector('.gbPlayer');
 const gbComputer = document.querySelector('.gbComputer');
 let counter = 0;
@@ -35,6 +36,7 @@ function placeShipPage (totalLength, game){
             break;
         case 5:
             placeShipPageE.style.display = 'none';
+            mainPageE.style.display = 'flex';
             removeAllChild(gbPlayer);
             removeAllChild(gbComputer);
             renderPlayerBoard(totalLength, game);
