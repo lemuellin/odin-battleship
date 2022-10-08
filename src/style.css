@@ -14,7 +14,6 @@
     justify-content: center;
     font-size: 40px;
     height: 8rem;
-    /* position: fixed; */
     top:0;
 }
 
@@ -69,6 +68,28 @@ h2{
 
 .grid:hover{
     opacity: 0.5;
+}
+
+.gridInit{
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    box-sizing: border-box;
+    border: .1px solid gray;
+}
+
+@media (max-width: 500px){
+    .gbPlayer, .gbComputer, .gbInit{
+        width: 320px;
+        height: 320px;
+        border: 16px solid #326990;
+    }
+
+    .grid, .gridInit{
+        width: 32px;
+        height: 32px;
+        border: .1px solid gray;
+    }
 }
 
 #resultPage, #placeShipPage{
@@ -138,7 +159,6 @@ h2{
 }
 
 .container11{
-    /* background-color: gray; */
     display: flex;
     justify-content: space-between;
 }
@@ -149,7 +169,7 @@ h2{
     background-color: red;
     border: none;
     border-radius: 50%;
-    cursor: pointer; /* Mouse pointer on hover */
+    cursor: pointer;
 
     display: flex;
     justify-content: center;
@@ -171,15 +191,3 @@ svg{
     width: 20px;
     height: 20px;
 }
-
-.gridInit{
-    width: 40px;
-    height: 40px;
-    background-color: white;
-    box-sizing: border-box;
-    border: .1px solid gray;
-}
-
-/* .gridInit:hover{
-    opacity: 0.5;
-} */
