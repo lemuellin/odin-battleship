@@ -64,6 +64,8 @@ h2{
     background-color: green;
     box-sizing: border-box;
     border: .1px solid gray;
+    font-size: xx-large;
+    text-align: center;
 }
 
 .grid:hover{

@@ -8,8 +8,8 @@ function placeShipRand (totalLength, game){
         let y = Math.floor(Math.random()*10);
         let orientation = Math.floor(Math.random()*2);
         orientation = (orientation == 0) ? 'horizontal':'vertical';
-        console.log(orientation);
-        console.log(x,y);
+        // console.log(orientation);
+        // console.log(x,y);
 
         switch(counter){
             case 0:
@@ -46,7 +46,7 @@ function placeShipRand (totalLength, game){
                 }
                         
                 if (((y + shipLength) < totalLength) && (stat == 'empty')){
-                    console.log(shipName, x, y, orientation);
+                    // console.log(shipName, x, y, orientation);
                     game.gbComputer.placeShip(shipName, x, y, orientation);
                     counter++;
                     break;
@@ -59,7 +59,7 @@ function placeShipRand (totalLength, game){
                     }
                 }
                 if (((x + shipLength) < totalLength) && (stat == 'empty')){
-                    console.log(shipName, x, y, orientation);
+                    // console.log(shipName, x, y, orientation);
                     game.gbComputer.placeShip(shipName, x, y, orientation);
                     counter++;
                     break;

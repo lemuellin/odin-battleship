@@ -14,6 +14,9 @@ function renderPlayerBoard(totalLength, game){
                 singleGrid[i][j].style.backgroundColor = "rgb(255,255,255)";
             } else if (game.gbPlayer.board[i][j] == 'miss'){
                 singleGrid[i][j].style.backgroundColor = "rgb(0,0,0)";
+            } else if (game.gbPlayer.board[i][j][3] == 'SUNK'){
+                singleGrid[i][j].style.backgroundColor = "rgb(135,206,250)";
+                singleGrid[i][j].textContent = "X";
             } else if (game.gbPlayer.board[i][j][2] == 'hit'){
                 singleGrid[i][j].style.backgroundColor = "rgb(255,0,0)";
             } else {
@@ -36,6 +39,9 @@ function renderComputerBoard(totalLength, game){
                 singleGrid[i][j].style.backgroundColor = "rgb(255,255,255)";
             } else if (game.gbComputer.board[i][j] == 'miss'){
                 singleGrid[i][j].style.backgroundColor = "rgb(0,0,0)";
+            } else if (game.gbComputer.board[i][j][3] == 'SUNK'){
+                singleGrid[i][j].style.backgroundColor = "rgb(135,206,250)";
+                singleGrid[i][j].textContent = "X";
             } else if (game.gbComputer.board[i][j][2] == 'hit'){
                 singleGrid[i][j].style.backgroundColor = "rgb(255,0,0)";
             } else {

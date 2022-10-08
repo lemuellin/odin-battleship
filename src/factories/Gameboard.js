@@ -47,16 +47,28 @@ const Gameboard = () => {
         if (board[x][y] == null){
             board[x][y] = 'miss';
         }else if (board[x][y] == 'miss' || board[x][y] == 'hit'){
-            console.log('invalid attack');
+            // console.log('invalid attack');
         }else{
             board[x][y][0].hit(board[x][y][1]);
             board[x][y][2] = 'hit';
+            if(board[x][y][0].isSunk()){
+                for(let i=0; i < 10; i++){
+                    for(let j=0; j < 10; j++){
+                        if((board[i][j] !== null) && (board[i][j].length == 3)){
+                            if(board[i][j][0].getName() == board[x][y][0].getName())board[i][j][3] = 'SUNK';
+                        }
+                    }
+                }
+            }
         }
     }
     // null -> miss
     // ship -> hit
     // hit -> again
     // miss -> again
+    // board[i][j] = [ShipFactory, ShipPosition(0-4), hit, SUNK]
+    // board[i][j] = 'miss'
+    // null, hit not SUNK, hit and SUNK, miss, Ship
 
 
     const allSunk = () => {
