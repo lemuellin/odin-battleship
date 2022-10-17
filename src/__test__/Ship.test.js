@@ -1,4 +1,4 @@
-const Ship = require('../Ship.js');
+const Ship = require('../factories/Ship');
 
 test('Ship health', () => {
     const ship1 = Ship(3);

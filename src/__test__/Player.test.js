@@ -1,4 +1,4 @@
-const Player = require('../Player');
+const Player = require('../factories/Player');
 
 test('Gameboard factory', () => {
     const game1 = Player();
