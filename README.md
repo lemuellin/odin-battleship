@@ -2,7 +2,7 @@
 A single player battleship game where the player tries to sink all of the oponent's ships(implemented AI)  
 [Live Demo](https://lemuellin.github.io/odin-battleship/) :point_left:
 
-<img src="./src/asset/battleship.gif">
+<img src="./src/asset/battleshipCompressed.gif">
 
 ## Summary
 1. Test Driven Development
