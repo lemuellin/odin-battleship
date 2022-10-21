@@ -1,5 +1,5 @@
 # Battleship
-A single player battleship game where the player tries to sink all of the oponent's ships(implemented AI)  
+A single player game developed using Test-Driven-Development(TDD) and OOP factory pattern, AI implemented  
 [Live Demo](https://lemuellin.github.io/odin-battleship/) :point_left:
 
 <img src="./src/asset/battleshipCompressed.gif">
