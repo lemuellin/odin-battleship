@@ -6,16 +6,20 @@ A single player battleship game where the player tries to sink all of the oponen
 
 ## Summary
 1. Test Driven Development
-    - Practice implementing the logic of the game using Jest and did not have to rely on creating a UI or making many console.log statements.
+    - Developed using Test-Driven-Development(TDD), unit tested game logic with Jest
 2. Factories and Modules
-    - By separating functions to different factories and module patterns helps cleaning up the code.
+    - Utilized OOP factory pattern to define gameboard objects and methods
+3. Webpack
+    - Compiled using Webpack for modular structure and project organization
+4. Smart AI
+    - Incorporated a computer AI by creating algorithms that allow it to make smart decisions
 
 ## Technologies
 -   TDD: Test-Driven Development
 -   Jest
 -   Webpack
--   HTML
--   CSS
+-   HTML5
+-   CSS3
 -   Vanilla Javascript
 
 ## Getting Started
