@@ -1,5 +1,5 @@
 # Battleship
-Classic game developed with Test-Driven-Development(TDD) and OOP factory pattern, AI implemented  
+Classic game developed with Test-Driven-Development(TDD) and OOP factory pattern  
 [Live Demo](https://lemuellin.github.io/odin-battleship/) :point_left:
 
 <img src="./src/asset/battleshipCompressed.gif">
